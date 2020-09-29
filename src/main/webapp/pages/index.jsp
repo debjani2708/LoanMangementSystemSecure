@@ -16,7 +16,7 @@
     <jsp:include page="${pageContext.request.contextPath}/header" />
     <section class="container-fluid p-4">
         <div class="jumbotron">
-            <h2>Loan Management System</h2>
+            <h2>Loan Management System Online</h2>
         </div>
         <c:if test="${msg != null }">
             <div class="card card-info">
