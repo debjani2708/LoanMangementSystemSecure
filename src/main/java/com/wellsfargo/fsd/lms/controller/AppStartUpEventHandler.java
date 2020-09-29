@@ -20,8 +20,8 @@ public class AppStartUpEventHandler {
 	
 	@EventListener
 	public void onStartUp(ApplicationReadyEvent event) {
-		if(!repositorty.existsByUserName("adminA")){
-			repositorty.save(new LMSUser("adminA","admin",penc.encode("admin"),"ADMIN"));
+		if(!repositorty.existsByUserName("admin")){
+			repositorty.save(new LMSUser("admin","adminA",penc.encode("admin"),"ADMIN"));
 		}
 	}
 }
