@@ -13,15 +13,15 @@ import com.wellsfargo.fsd.lms.enitity.LMSUser;
 public class AppStartUpEventHandler {
 
 	@Autowired
-	private LMSUserRepo repo;
+	private LMSUserRepo repositorty;
 	
 	@Autowired
 	private PasswordEncoder penc;
 	
 	@EventListener
 	public void onStartUp(ApplicationReadyEvent event) {
-		if(!repo.existsByUserName("admin")){
-			repo.save(new LMSUser("admin","admin",penc.encode("admin"),"ADMIN"));
+		if(!repositorty.existsByUserName("admin")){
+			repositorty.save(new LMSUser("admin","admin",penc.encode("admin"),"ADMIN"));
 		}
 	}
 }
