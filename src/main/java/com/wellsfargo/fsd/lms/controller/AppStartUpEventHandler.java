@@ -22,7 +22,7 @@ public class AppStartUpEventHandler {
 	public void onStartUp(ApplicationReadyEvent event) {
 
 		if(!repositorty.existsByUserName("admin")){
-			repositorty.save(new LMSUser("admin","adminA",penc.encode("admin"),"ADMIN"));
+			repositorty.save(new LMSUser("admin","admin",penc.encode("admin"),"ADMIN"));
 		}
 	}
 }
