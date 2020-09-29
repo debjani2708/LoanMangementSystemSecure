@@ -20,7 +20,7 @@ import com.wellsfargo.fsd.lms.service.UserDetailServiceImpl;
 public class DefaultController {
 
 	@Autowired
-	private UserDetailServiceImpl userService;
+	private UserDetailServiceImpl userServices;
 	   
 	@GetMapping({"","/","/home"})
 	public String getHome() {
@@ -57,7 +57,7 @@ public class DefaultController {
 	  @PostMapping("/register")
 	    public ModelAndView doRegisteration(@ModelAttribute("user") LMSUser user) {
 	        user.setRole("USER");
-	        user = userService.save(user);
+	        user = userServices.save(user);
 	        return new ModelAndView("index", "msg", "User got registered! with ID#" + user.getUserId());
 	    }
 	
